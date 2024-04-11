@@ -40,7 +40,9 @@ optional - testing go
 
 // create go module
 
-> go mod init <your IP address>/hello
+> go mod init (your IP address)/hello
+
+(use curl ifconfig.me to find your IP address)
 
 //create file for testing
 
@@ -111,31 +113,21 @@ Hello, World!
 "difficulty": "1000",
 "gasLimit": "2000000",
 "alloc": {
-"6a45Da18249Fd31AAE38477F5Fe4162E0d575D18": {
-"balance": "10000000000000000000000"
-},
-"49aC57289477f5340d619400Bd4489De25266039": {
-"balance": "20000000000000000000000"
-},
-
-    "2ad6D7A9A86d9ABe330a1F44B26046f2D93efcdE":{
-      "balance":"10000000000000000000000"
-    },
-    "FeF78F6613B31Fb212A258c877FD222C82580abF":{
-        "balance":"10000000000000000000000000000000"
-    }
-
+"6a45Da18249Fd31AAE38477F5Fe4162E0d575D18": {"balance": "10000000000000000000000"},
+"49aC57289477f5340d619400Bd4489De25266039": {"balance": "20000000000000000000000"},
+"2ad6D7A9A86d9ABe330a1F44B26046f2D93efcdE":{"balance":"10000000000000000000000"},
+"FeF78F6613B31Fb212A258c877FD222C82580abF":{"balance":"10000000000000000000000000000000"}
 }
 }
 
 // press crtl + x then press y then press enter to save the change
 
-> geth init --datadir <choose your folder name> genesis.json
+> geth init --datadir (choose your folder name) genesis.json
 
 join as miner node
 
-> geth --datadir <your folder name> --networkid 4785 --port 30303 --bootnodes <bootstrap-node-record> --mine --miner.threads=1 --miner.etherbase=<your walllet address>
+> geth --datadir (your folder name) --networkid 4785 --port 30303 --bootnodes (bootstrap-node-record) --mine --miner.threads=1 --miner.etherbase=(your walllet address)
 
 join as member node
 
-geth --datadir <your folder name> --networkid 4785 --port 30303 --bootnodes <bootstrap-node-record>
+geth --datadir (your folder name) --networkid 4785 --port 30303 --bootnodes (bootstrap-node-record)
