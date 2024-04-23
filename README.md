@@ -133,45 +133,7 @@ leave the folder for the next step
  cd ..
 ```
 
-```bash
- nano genesis.json
-```
-
-copy the following content into the terminal
-
-```bash
-
-{
-"config": {
-"chainId": 4785,
-"homesteadBlock": 0,
-"eip155Block": 0,
-"eip158Block": 0,
-"byzantiumBlock": 0,
-"constantinopleBlock": 0,
-"petersburgBlock": 0,
-"istanbulBlock": 0,
-"muirGlacierBlock": 0,
-"berlinBlock": 0,
-"londonBlock": 0,
-"arrowGlacierBlock": 0,
-"grayGlacierBlock": 0,
-"eip150Block": 0,
-"eip150Hash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-"etash":""
-},
-"difficulty": "1000",
-"gasLimit": "2000000",
-"alloc": {
-"6a45Da18249Fd31AAE38477F5Fe4162E0d575D18": {"balance": "10000000000000000000000"},
-"49aC57289477f5340d619400Bd4489De25266039": {"balance": "20000000000000000000000"},
-"2ad6D7A9A86d9ABe330a1F44B26046f2D93efcdE":{"balance":"10000000000000000000000"},
-"FeF78F6613B31Fb212A258c877FD222C82580abF":{"balance":"10000000000000000000000000000000"}
-}
-}
-```
-
-press crtl + x then press y then press enter to save the change
+# start your ethereum node
 
 ```bash
  geth init --datadir (choose your folder name) genesis.json
