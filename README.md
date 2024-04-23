@@ -16,7 +16,7 @@ for [Go](https://www.digitalocean.com/community/tutorials/how-to-install-go-on-u
 
 for [GETH](https://geth.ethereum.org/downloads)
 
-for [make](https://ioflood.com/blog/install-make-command-linux/)
+for [GNU Make](https://ioflood.com/blog/install-make-command-linux/)
 
 # optional - testing go
 
