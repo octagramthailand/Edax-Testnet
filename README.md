@@ -66,7 +66,7 @@ fmt.Println("Hello, World!")
 expected output on the terminal
 Hello, World!
 
-# prepare GETH with the proper version
+# prepare GETH version 1.11.6-stable
 
 ```bash
  git clone https://github.com/octagramthailand/Edax-Testnet.git
