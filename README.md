@@ -1,49 +1,22 @@
-# Install Go language
+# Creating your Ethereum node
 
-## change to home directory
+we reccommend using Ubuntu 20.04 as your operating system in order to follow this tutorial
 
-```bash
- cd ~
-```
+## Please ensure that your environment has the following version of these dependency before starting the Ethereum node
 
-## retrieve the go file
+GNU Make 4.3
 
-```bash
-curl -OL https://golang.org/dl/go1.20.5.linux-amd64.tar.gz
+Go go1.20.5.linux-amd64.tar.gz
 
-```
+GETH (Go-Ethereum) : 1.11.6-stable (the tutorial will instruct how to change the GETH version)
 
-## verify the download
+If you need to install these dependency please refer to the follwing sites
 
-```bash
- sha256sum go1.20.5.linux-amd64.tar.gz
-```
+for [Go] (https://www.digitalocean.com/community/tutorials/how-to-install-go-on-ubuntu-20-04)
 
-## extract the file
+for [GETH] (https://geth.ethereum.org/downloads)
 
-```bash
- sudo tar -C /usr/local -xvf go1.20.5.linux-amd64.tar.gz
-```
-
-## set up path for go file
-
-```bash
- sudo nano ~/.profile
-```
-
-## adding the following line to the end of the file
-
-press crtl+x => y => enter to finish the editing process
-
-```bash
- export PATH=$PATH:/usr/local/go/bin
-```
-
-## refresh your profile
-
-```bash
-source ~/.profile
-```
+for [make] (https://ioflood.com/blog/install-make-command-linux/)
 
 # optional - testing go
 
@@ -93,23 +66,7 @@ fmt.Println("Hello, World!")
 expected output on the terminal
 Hello, World!
 
-# prepare and initiate geth client
-
-```bash
- sudo add-apt-repository -y ppa:ethereum/ethereum
-```
-
-```bash
- sudo apt-get update
-```
-
-```bash
- sudo apt-get install ethereum
-```
-
-```bash
- apt install make
-```
+# prepare GETH with the proper version
 
 ```bash
  git clone https://github.com/octagramthailand/Edax-Testnet.git
@@ -127,26 +84,25 @@ Hello, World!
  sudo cp build/bin/geth /usr/local/bin/
 ```
 
-leave the folder for the next step
-
-```bash
- cd ..
+```python
+# returns Geth Version: 1.11.6-stable
+geth version
 ```
 
 # start your ethereum node
 
 ```bash
- geth init --datadir (choose your folder name) genesis.json
+ geth init --datadir ethereum-node genesis.json
 ```
 
 join as miner node
 
 ```bash
- geth --datadir (your folder name) --networkid 4785 --port 30303 --bootnodes (bootstrap-node-record) --mine --miner.threads=1 --miner.etherbase=(your walllet address)
+ geth --datadir ethereum-node --networkid 4785 --port 30303 --bootnodes (bootstrap-node-record) --mine --miner.threads=1 --miner.etherbase=(your walllet address)
 ```
 
 join as member node
 
 ```bash
-geth --datadir (your folder name) --networkid 4785 --port 30303 --bootnodes (bootstrap-node-record)
+geth --datadir ethereum-node --networkid 4785 --port 30303 --bootnodes (bootstrap-node-record)
 ```
