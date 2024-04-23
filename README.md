@@ -1,54 +1,79 @@
-1 install go
+# Install Go language
 
-// change to home directory
+## change to home directory
 
-> cd ~
+```bash
+ cd ~
+```
 
-// retrieve the go file
+## retrieve the go file
 
-> curl -OL https://golang.org/dl/go1.20.5.linux-amd64.tar.gz
+```bash
+curl -OL https://golang.org/dl/go1.20.5.linux-amd64.tar.gz
 
-// verify the download
+```
 
-> sha256sum go1.20.5.linux-amd64.tar.gz
+## verify the download
 
-// extract the file
+```bash
+ sha256sum go1.20.5.linux-amd64.tar.gz
+```
 
-> sudo tar -C /usr/local -xvf go1.20.5.linux-amd64.tar.gz
+## extract the file
 
-//set up path for go file
+```bash
+ sudo tar -C /usr/local -xvf go1.20.5.linux-amd64.tar.gz
+```
 
-> sudo nano ~/.profile
+## set up path for go file
 
-// adding the following line to the end of the file
+```bash
+ sudo nano ~/.profile
+```
 
-> export PATH=$PATH:/usr/local/go/bin
+## adding the following line to the end of the file
 
-> (press crtl+x => y => enter to finish the editing process)
+press crtl+x => y => enter to finish the editing process
 
-//refresh your profile
+```bash
+ export PATH=$PATH:/usr/local/go/bin
+```
 
-> source ~/.profile
+## refresh your profile
 
-optional - testing go
+```bash
+source ~/.profile
+```
 
-// create directory & change directory
+# optional - testing go
 
-> mkdir hello
+## create directory & change directory
 
-> cd hello
+```bash
+ mkdir hello
+```
 
-// create go module
+```bash
+cd hello
+```
 
-> go mod init (your IP address)/hello
+## create go module
 
-(use curl ifconfig.me to find your IP address)
+use curl ifconfig.me to find your IP address
 
-//create file for testing
+```bash
+ go mod init (your IP address)/hello
+```
 
-> nano hello.go
+## create file for testing
 
-// copy the following into hello.go file
+```bash
+ nano hello.go
+```
+
+## copy the following into hello.go file
+
+```bash
 
 package main
 
@@ -57,39 +82,64 @@ import "fmt"
 func main() {
 fmt.Println("Hello, World!")
 }
+```
 
-//run the file
+## run the file
 
-> go run .
+```bash
+ go run .
+```
 
 expected output on the terminal
 Hello, World!
 
-2. prepare and initiate geth client
+# prepare and initiate geth client
 
-> sudo add-apt-repository -y ppa:ethereum/ethereum
+```bash
+ sudo add-apt-repository -y ppa:ethereum/ethereum
+```
 
-> sudo apt-get update
+```bash
+ sudo apt-get update
+```
 
-> sudo apt-get install ethereum
+```bash
+ sudo apt-get install ethereum
+```
 
-> apt install make
+```bash
+ apt install make
+```
 
-> git clone https://github.com/SorrawitRUNGRUJEE/EDAX_GETH.git
+```bash
+ git clone https://github.com/octagramthailand/Edax-Testnet.git
+```
 
-> cd EDAX_GETH
+```bash
+ cd EDAX_GETH
+```
 
-> make geth
+```bash
+ make geth
+```
 
-> sudo cp build/bin/geth /usr/local/bin/
+```bash
+ sudo cp build/bin/geth /usr/local/bin/
+```
 
-// leave the folder for the next step
+leave the folder for the next step
 
-> cd ..
+```bash
+ cd ..
+```
 
-> nano genesis.json
+```bash
+ nano genesis.json
+```
 
-// copy the following content into the terminal
+copy the following content into the terminal
+
+```bash
 
 {
 "config": {
@@ -119,15 +169,22 @@ Hello, World!
 "FeF78F6613B31Fb212A258c877FD222C82580abF":{"balance":"10000000000000000000000000000000"}
 }
 }
+```
 
-// press crtl + x then press y then press enter to save the change
+press crtl + x then press y then press enter to save the change
 
-> geth init --datadir (choose your folder name) genesis.json
+```bash
+ geth init --datadir (choose your folder name) genesis.json
+```
 
 join as miner node
 
-> geth --datadir (your folder name) --networkid 4785 --port 30303 --bootnodes (bootstrap-node-record) --mine --miner.threads=1 --miner.etherbase=(your walllet address)
+```bash
+ geth --datadir (your folder name) --networkid 4785 --port 30303 --bootnodes (bootstrap-node-record) --mine --miner.threads=1 --miner.etherbase=(your walllet address)
+```
 
 join as member node
 
+```bash
 geth --datadir (your folder name) --networkid 4785 --port 30303 --bootnodes (bootstrap-node-record)
+```
