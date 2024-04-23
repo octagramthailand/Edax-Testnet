@@ -73,7 +73,7 @@ Hello, World!
 ```
 
 ```bash
- cd EDAX_GETH
+ cd Edax-Testnet
 ```
 
 ```bash
