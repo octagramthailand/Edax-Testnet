@@ -12,11 +12,14 @@ GETH (Go-Ethereum) : 1.11.6-stable (the tutorial will instruct how to change the
 
 If you need to install these dependency please refer to the follwing sites
 
-for [Go] (https://www.digitalocean.com/community/tutorials/how-to-install-go-on-ubuntu-20-04)
+for [Go]
+(https://www.digitalocean.com/community/tutorials/how-to-install-go-on-ubuntu-20-04)
 
-for [GETH] (https://geth.ethereum.org/downloads)
+for [GETH]
+(https://geth.ethereum.org/downloads)
 
-for [make] (https://ioflood.com/blog/install-make-command-linux/)
+for [make]
+(https://ioflood.com/blog/install-make-command-linux/)
 
 # optional - testing go
 
