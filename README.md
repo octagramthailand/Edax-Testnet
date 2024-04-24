@@ -8,13 +8,9 @@ GNU Make 4.3
 
 Go go1.20.5.linux-amd64.tar.gz
 
-GETH (Go-Ethereum) : 1.11.6-stable (the tutorial will instruct how to change the GETH version)
-
 If you need to install these dependency please refer to the follwing sites
 
 for [Go](https://www.digitalocean.com/community/tutorials/how-to-install-go-on-ubuntu-20-04)
-
-for [GETH](https://geth.ethereum.org/downloads)
 
 for [GNU Make](https://ioflood.com/blog/install-make-command-linux/)
 
@@ -67,6 +63,8 @@ expected output on the terminal
 Hello, World!
 
 # prepare GETH version 1.11.6-stable
+
+download the latest [GETH Client](https://geth.ethereum.org/downloads)
 
 ```bash
  git clone https://github.com/octagramthailand/Edax-Testnet.git
